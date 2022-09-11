@@ -4,17 +4,10 @@ import model.Game;
 import model.Player;
 
 public class GameController {
-    Player player1;
-    Player player2;
-    String keyWord;
-
     Game game;
 
     public GameController(Player player1, Player player2, String keyWord) {
-        this.player1 = player1;
-        this.player2 = player2;
-        this.keyWord = keyWord;
-        this.game = new Game(this.player1, this.player2, this.keyWord.toCharArray());
+        this.game = new Game(player1, player2, keyWord.toCharArray());
     }
 
     public int play(char guess) {
